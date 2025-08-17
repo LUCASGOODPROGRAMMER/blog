@@ -1,0 +1,82 @@
+/* Container principal */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #1e293b; /* azul escuro elegante */
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c1d9ff; /* amarelo vibrante */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: #9ec3ff; /* amarelo mais claro */
+}
+
+/* Lista de links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Links padrão */
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background: #334155;
+  color: #fff;
+}
+
+/* Link ativo */
+.active {
+  background: #2563eb;
+  color: #fff !important;
+}
+
+/* Botão New Post */
+.new-btn {
+  background: #16a34a;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.new-btn:hover {
+  background: #22c55e;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}

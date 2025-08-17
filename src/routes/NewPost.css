@@ -1,0 +1,84 @@
+.new-post {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Título do formulário */
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* Formulário */
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cada campo */
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-control input,
+.form-control textarea {
+  padding: 10px 12px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.4);
+  outline: none;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botão enviar */
+.add-btn {
+  padding: 12px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background: #22c55e;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .new-post {
+    margin: 20px;
+    padding: 20px;
+  }
+}

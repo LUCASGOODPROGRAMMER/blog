@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Outlet } from "react-router-dom"
+import NavBar from "./components/NavBar"
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  // define quantos flocos a ser gerado
+  const snowflakes = Array.from({ length: 100 }, (_, i) => ({
+    id: i,
+    left: Math.random() * 100,         // posição horizontal (%)
+    size: Math.random() * 8 + 4,       // tamanho entre 4px e 12px
+    duration: Math.random() * 10 + 10, // duração da animação (10–20s)
+    delay: Math.random() * 10          // atraso inicial (0–10s)
+  }))
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      {/* Flocos de neve */}
+      <div className="snow-container">
+        {snowflakes.map((flake) => (
+          <span
+            key={flake.id}
+            className="snow"
+            style={{
+              left: `${flake.left}%`,
+              width: `${flake.size}px`,
+              height: `${flake.size}px`,
+              animationDuration: `${flake.duration}s`,
+              animationDelay: `${flake.delay}s`
+            }}
+          ></span>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      {/* Conteúdo */}
+      <NavBar />
+      <div className="container">
+        <Outlet />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 

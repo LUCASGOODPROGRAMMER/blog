@@ -1,0 +1,80 @@
+/* Container principal */
+.posts-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Título da página */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #c1d9ff; /* azul ciano */
+}
+
+/* Texto de carregamento */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #64748b; /* cinza elegante */
+}
+
+/* Grid dos posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Card de cada post */
+.post-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Título do post */
+.post-card h2 {
+  font-size: 1.4rem;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.post-card h2::first-letter {
+    text-transform: uppercase;
+}
+
+/* Texto do post */
+.post-card p {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Botão Ler Mais */
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+
